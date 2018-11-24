@@ -1,6 +1,9 @@
 # Shorten Url Api
 
+[![Build Status](https://travis-ci.org/linhnn/shorten-url-api.svg?branch=master)](https://travis-ci.org/linhnn/shorten-url-api)
+
 GraphQL server in Node.js using Express, MongoDB (and Mongoose).
+
 Author: linhvt22@gmail.com
 
 ## Requirements
