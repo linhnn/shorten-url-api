@@ -3,6 +3,9 @@ node_js:
   - "10.4.1"
 services:
   - mongodb
+env:
+  global:
+    - NODE_ENV=travis
 cache:
   directories:
   - node_modules

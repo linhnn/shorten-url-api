@@ -7,7 +7,11 @@ const app = require('./../config/tiki.js');
 
 before(async () => {
   process.env.test_port = 3002;
-  process.env.mongoUri = `${process.env.mongoUri}-test`;
+  if (process.env.NODE_ENV === 'travis') {
+    process.env.mongoUri = `${process.env.mongoUri_travis}-test`;
+  } else {
+    process.env.mongoUri = `${process.env.mongoUri}-test`;    
+  }
   global.graphqlUrl = `http://localhost:${process.env.test_port}/graphql`;
   await app.start();
   await Url.remove({});
