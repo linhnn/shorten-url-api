@@ -11,7 +11,7 @@ Author: linhvt22@gmail.com
 * node `^10.0.0`
 * npm `^6.0.0`
 
-## Installation&running
+## Installation & running
 
 1. Install dependencies
 

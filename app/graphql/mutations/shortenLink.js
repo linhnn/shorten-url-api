@@ -3,6 +3,8 @@ const {
   GraphQLNonNull,
 } = require('graphql');
 const shortid = require('shortid');
+const request = require('request');
+const cheerio = require('cheerio');
 const UrlType = require('../types/UrlType');
 const { isValidUrl, isProtocolUrl } = require('../../utils/string');
 
@@ -43,6 +45,14 @@ module.exports = {
           shortUrl,
         });
       }
+
+      request(originalUrl, async function (error, response, body) {
+         if (!error && response.statusCode == 200) {
+           const $ = cheerio.load(body);
+           const title = $("title").text();
+           await Url.update({_id: entry._id }, {$set: { title }}, {upsert: false, multi: true})
+         }
+       });
 
       // send email
       const subscribes = await Subscribe.find();

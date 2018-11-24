@@ -26,6 +26,10 @@ const UrlType = new GraphQLObjectType({
       type: GraphQLString,
       description: 'URL đã thu gọn',
     },
+    title: {
+      type: GraphQLString,
+      description: 'Title',
+    },
     count: {
       type: GraphQLInt,
       description: 'Số lần URL được truy cập',
