@@ -1,0 +1,47 @@
+{
+  "name": "app-api",
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
+  },
+  "version": "1.0.0",
+  "description": "API",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "lint": "eslint app",
+    "test": "mocha --recursive  --reporter nyan --exit"
+  },
+  "author": "linhnn <linhvt22@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "nodemon": "^1.18.6"
+  },
+  "dependencies": {
+    "apollo-errors": "^1.9.0",
+    "assert": "^1.4.1",
+    "chai": "^4.2.0",
+    "chalk": "^2.4.1",
+    "cors": "^2.8.5",
+    "cron": "^1.5.0",
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4",
+    "express-graphql": "^0.7.1",
+    "faker": "^4.1.0",
+    "graphql": "^14.0.2",
+    "graphql-playground-middleware-express": "^1.7.7",
+    "mocha": "^5.2.0",
+    "moment": "^2.22.2",
+    "mongoose": "^4.13.12",
+    "nodemailer": "^4.7.0",
+    "shortid": "^2.2.14",
+    "should": "^13.2.3",
+    "supertest": "^3.3.0"
+  }
+}

@@ -1,0 +1,23 @@
+version: '2'
+services:
+  api:
+    build: .
+    ports:
+      - 3001:3001
+    links:
+      - mongodb
+    depends_on:
+      - mongodb
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+
+  mongodb:
+    image: mongo:3.0
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb:/data/db/
+
+volumes:
+  mongodb:
